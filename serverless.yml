@@ -1,0 +1,28 @@
+service: serverlessApi
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ap-south-1
+ 
+
+functions:
+  register:
+    handler: handler.register
+    events:
+      - http:
+          path: register
+          method: post
+  login:
+    handler: handler.login
+    events:
+      - http:
+          path: login
+          method: post
+  profile:
+    handler: handler.profile
+    events:
+      - http:
+          path: profile/{id}  
+          method: post
