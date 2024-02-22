@@ -1,0 +1,8 @@
+1. install serverless into global
+npm i -g serverless
+2.npm init
+3.run cmmand serverless (if not work than serverless.cmd)(select serverlesss http) (than give template of serverless)(skip deploy)
+4.ask to login serverless skip
+5.create user into aws iam and give policy of awsadminstrator
+6.provide credential of usser id and than after secret key
+7.and than deploy

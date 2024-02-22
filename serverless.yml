@@ -1,11 +1,10 @@
-service: serverlessApi
+service: serverless
 frameworkVersion: '3'
 
 provider:
   name: aws
-  runtime: nodejs18.x
+  runtime: nodejs20.x
   region: ap-south-1
- 
 
 functions:
   register:
@@ -14,15 +13,28 @@ functions:
       - http:
           path: register
           method: post
+
+  
+  verifyCode:
+    handler: handler.verifyCode
+    events:
+      - http:
+          path: verify
+          method: post
+
   login:
     handler: handler.login
     events:
       - http:
           path: login
           method: post
+
   profile:
     handler: handler.profile
     events:
       - http:
-          path: profile/{id}  
-          method: post
+          path: profile
+          method: get
+          authorizer:
+            name: profileAuthorizer
+            arn: arn:aws:cognito-idp:ap-south-1:851725365230:userpool/ap-south-1_pAJi67Ofy  (user pool arn (delete it if use))

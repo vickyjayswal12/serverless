@@ -1,4 +1,3 @@
-
 // what services provided to aws lambda function by default  into serveless framwork after deploy
 
 // When deploying AWS Lambda functions using the Serverless Framework, several AWS services are provided to Lambda functions by default. These services are integral to the Serverless Framework's functionality and facilitate the deployment, operation, and scaling of serverless applications. Here are some of the key services provided:
