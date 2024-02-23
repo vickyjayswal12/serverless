@@ -6,3 +6,7 @@ npm i -g serverless
 5.create user into aws iam and give policy of awsadminstrator
 6.provide credential of usser id and than after secret key
 7.and than deploy
+
+//if authountication done using cognito than create cognito pool into aws console 
+//attach all credential into arn user poll into profile and all credential like usepool id and client id assing in into env file
+in handler for login and register and code verify use cognito singup and singin api
