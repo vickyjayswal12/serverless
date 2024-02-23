@@ -38,3 +38,4 @@ functions:
           authorizer:
             name: profileAuthorizer
             arn: arn:aws:cognito-idp:ap-south-1:851725365230:userpool/ap-south-1_pAJi67Ofy  (user pool arn (delete it if use))
+            type: COGNITO_USER_POOLS
