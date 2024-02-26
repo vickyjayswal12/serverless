@@ -47,3 +47,27 @@
 // 5. **CloudFormation**: Serverless Framework uses CloudFormation under the hood to manage and provision AWS resources. CloudFormation templates are generated based on your serverless.yml configuration file, and they define the infrastructure required for your application, including API Gateway resources.
 
 // These are the primary services involved in the interaction after deploying a Serverless application with API Gateway triggering Lambda functions. Each service plays a crucial role in enabling the functionality and ensuring that your application operates smoothly.
+
+
+
+
+// after serverless deploy when your practicl done tham must delet stack in aws cloudformation(into stack there are multiple resources are alloted which auto create)
+
+
+// Q-- what happen after serverless application deploy using serverless framework 
+
+// When you deploy a serverless application using a framework like AWS Serverless Application Model (SAM) or the Serverless Framework, a CloudFormation stack is created behind the scenes to manage the resources that make up your serverless application. Here's how CloudFormation is utilized in this context:
+
+// 1. **Resource Management**: Serverless frameworks like SAM or Serverless Framework translate your serverless application configuration (e.g., Lambda functions, API Gateway endpoints, DynamoDB tables) into CloudFormation templates. These templates define the AWS resources needed to run your application.
+
+// 2. **Deployment**: The serverless framework packages your application code and configuration and then sends it to AWS CloudFormation. CloudFormation takes this information and deploys the resources specified in the template to your AWS account.
+
+// 3. **Stack Management**: CloudFormation organizes the resources provisioned for your serverless application into a stack. This stack represents a collection of related resources that are managed as a single unit. You can create, update, delete, and monitor this stack using CloudFormation commands or the AWS Management Console.
+
+// 4. **Dependency Resolution**: CloudFormation automatically handles dependencies between resources. For example, if your Lambda function depends on an API Gateway endpoint, CloudFormation ensures that the API Gateway is created before the Lambda function so that the function can be configured with the correct triggers.
+
+// 5. **Rollback on Failure**: If there's an issue during the deployment process, CloudFormation rolls back the changes to maintain a consistent state. This helps to prevent partial deployments and ensures that your application remains in a working state.
+
+// 6. **Version Control and Reproducibility**: CloudFormation templates can be version-controlled alongside your application code, allowing you to track changes over time and easily reproduce deployments in different environments.
+
+// In summary, CloudFormation plays a crucial role in managing the infrastructure for serverless applications deployed using frameworks like SAM or Serverless Framework. It automates the provisioning and management of resources, handles dependencies, and ensures consistent deployments of your serverless applications on AWS.
